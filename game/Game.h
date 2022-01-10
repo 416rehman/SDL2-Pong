@@ -1,9 +1,3 @@
-/* I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
-   Name: Hayaturehman Ahmadzai
-   Email: hahmadzai3@myseneca.ca
-   Student ID: 122539166
-   Created on 2021-12-28.*/
-
 #ifndef SDDS_GAME_H
 #define SDDS_GAME_H
 #include <SDL.h>
@@ -15,16 +9,25 @@ namespace Core {
     };
 
     class Game {
+        //Window
         SDL_Window *m_window;
         SDL_Renderer *m_renderer;
 
+        //Ball
         Vector2 m_ballPos;
-        Vector2 m_paddlePos;
         Vector2 m_ballVel;
 
+        //Player 1
+        Vector2 m_paddlePos;
+        float m_PaddleDir;
+
+        //Player 2
+        Vector2 m_paddlePos2;
+        float m_PaddleDir2;
+
+        //Game State
         bool m_isRunning;
         float m_ticksCount;
-        float m_PaddleDir;
 
     public:
         Game();
